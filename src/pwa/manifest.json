@@ -1,12 +1,12 @@
 {
-  "name": "WTF: PWA",
-  "short_name": "WTF: PWA",
+  "name": "Exchange rates",
+  "short_name": "Rates",
   "theme_color": "#000000",
   "background_color": "#000000",
   "display": "standalone",
   "orientation": "portrait",
-  "scope": "/wtf-gulp-starter/",
-  "start_url": "/wtf-gulp-starter/",
+  "scope": "/currency/",
+  "start_url": "/currency/",
   "icons": [
     {
       "src": "assets/pwa/icons/icon-72x72.png",
