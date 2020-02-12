@@ -15,7 +15,7 @@ if ('serviceWorker' in navigator) {
 }
 const exchangeRate__list = document.querySelector('.exchangeRate__list');
 console.log(exchangeRate__list);
-fetch('http://api.nbp.pl/api/exchangerates/tables/A')
+fetch('https://api.nbp.pl/api/exchangerates/tables/A')
 .then(resp => {return resp.json()})
 .then(data => {
 exchangeRate__list.innerText += ` ${data[0].effectiveDate}`
