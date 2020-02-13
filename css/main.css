@@ -311,20 +311,25 @@ html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box; }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   -webkit-box-sizing: inherit;
           box-sizing: inherit; }
 
 .exchangeRate__list {
+  width: 350px;
   list-style: none;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
   padding: 20px;
-  border-radius: 15px;
+  margin-top: 0;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 1.125rem;
-  font-weight: 600;
+  font-size: 16px;
+  font-weight: bold;
   color: white;
   background-color: black; }
 
@@ -335,7 +340,11 @@ html {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
-          flex-direction: column; }
+          flex-direction: column;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+  margin-top: 0; }
 
 .gold__price {
   width: 360px;
@@ -359,7 +368,7 @@ html {
   display: block;
   margin: 0 auto;
   width: 350px;
-  height: 275px;
+  height: 270px;
   margin-top: 20px; }
 
 /*# sourceMappingURL=main.css.map */
