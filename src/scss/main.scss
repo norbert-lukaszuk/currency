@@ -1,16 +1,17 @@
 @import "_normalize";
 @import "_variables";
 
-
 html {
   box-sizing: border-box;
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
-.exchangeRate__list{
+.exchangeRate__list {
   list-style: none;
   align-self: center;
   padding: 20px;
@@ -21,30 +22,30 @@ html {
   color: white;
   background-color: black;
 }
-.exchangeRate__wraper{
+.exchangeRate__wraper {
   display: flex;
   flex-direction: column;
 }
-.gold__price{
-	width: 360px;
-	display: block;
-	margin: 25px auto;
+.gold__price {
+  width: 360px;
+  display: block;
+  margin: 25px auto;
 }
-.list__item{
+.list__item {
   align-self: center;
   padding-left: 10px;
   padding-top: 10px;
   font-size: 1rem;
   font-weight: 400;
 }
-.poweredBy{
-	text-align: center;
-	display: none;
+.poweredBy {
+  text-align: center;
+  display: none;
 }
-.table{
-	display: block;
-	margin: 0 auto;
-	width: 350px;
+.table {
+  display: block;
+  margin: 0 auto;
+  width: 350px;
   height: 275px;
   margin-top: 20px;
 }
