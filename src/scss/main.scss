@@ -10,7 +10,13 @@ html {
 *:after {
   box-sizing: inherit;
 }
-
+.cinkciarz_wraper {
+  margin-top: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
 .exchangeRate__list {
   list-style: none;
   align-self: center;
