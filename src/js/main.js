@@ -22,35 +22,43 @@ if ("serviceWorker" in navigator) {
 const exchangeRate__list = document.querySelector(".exchangeRate__list");
 const button = document.getElementById("add_button");
 let row;
+let tbody;
+let str = [];
+
 const getData = () => {
-  let str = [];
-  let eurusd = "";
   row = document.createElement("tr");
 
   setTimeout(() => {
-    const tbody = document.querySelector("tbody");
-    console.log("tbody", tbody);
-    const widget = document.querySelector("#currenciesRates");
-    widget.addEventListener("change", () => {
-      console.log("change");
-    });
-    console.log(widget);
+    tbody = document.querySelector("tbody");
+
     const query = document.querySelectorAll("span");
-    console.log(query);
+
     query.forEach((element) => {
       str.push(element.innerText);
     });
     const numbers = str.map((item) => Number(item.replace(",", ".")));
-    console.log("setTimeout ~ numbers", numbers);
+
     let eurusd = (numbers[1] / numbers[3]).toString().slice(0, 5);
     row.innerHTML = `<td>EUR/USD</td><td id="count">${eurusd}</td>`;
     tbody.append(row);
-    const count = document.getElementById("count");
   }, 800);
+};
+const getUpdate = () => {
+  const query = document.querySelectorAll("span");
+
+  query.forEach((element) => {
+    str.push(element.innerText);
+  });
+  const numbers = str.map((item) => Number(item.replace(",", ".")));
+
+  let eurusd = (numbers[1] / numbers[3]).toString().slice(0, 5);
+  row.innerHTML = `<td>EUR/USD</td><td id="count">${eurusd}</td>`;
+  tbody.append(row);
+  console.log("udpate");
 };
 getData();
 setInterval(() => {
-  row.innerHTML = '<td>EUR/USD</td><td id="count">update</td>';
+  getUpdate();
 }, 3000);
 
 // setTimeout(() => {
