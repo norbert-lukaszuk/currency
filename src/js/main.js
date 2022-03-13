@@ -9,13 +9,13 @@ if ("serviceWorker" in navigator) {
         // Registration was successful
         console.log(
           "ServiceWorker registration successful with scope: ",
-          registration.scope
+          registration.scope,
         );
       },
       function (err) {
         // registration failed :(
         console.log("ServiceWorker registration failed: ", err);
-      }
+      },
     );
   });
 }
@@ -63,7 +63,7 @@ const getUpdate = () => {
 getData();
 setInterval(() => {
   getUpdate();
-}, 5000);
+}, 15000);
 
 console.log(exchangeRate__list);
 fetch("https://api.nbp.pl/api/exchangerates/tables/A")
